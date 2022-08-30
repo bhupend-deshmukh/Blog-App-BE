@@ -1,7 +1,8 @@
 const knex = require("../config/db");
 
 like = (req, res) => {
-  let { post_id, like } = req.body;
+  let { post_id, like } = req.body
+  
   let user_id = res.tokendata.id;
   knex("posts")
     .where("id", post_id)
@@ -61,9 +62,10 @@ like = (req, res) => {
                 }
               })
               .catch((err) => {
+                
                 console.log(err);
-              });
-          });
+              }); 
+          });     
       } else {
         res.send({ status: "error", message: "this blog does't exist..." });
       }
@@ -73,6 +75,6 @@ like = (req, res) => {
     });
 };
 
-seelikes = (req, res) => {};
+// seelikes = (req, res) => {};
 
 module.exports = { like };

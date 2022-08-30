@@ -20,15 +20,16 @@ list_post = (req, res) => {
           for (let ind = 0; ind < data.length; ind++) {
             let likes = await knex("likes").where({
               post_id: data[ind].id,
-              like: 1,
+              
             });
+            console.log(likes);
             let newObj = {
               id: data[ind].id,
               title: data[ind].title,
               description: data[ind].description,
               user_id: data[ind].user_id,
               created_at: data[ind].created_at,
-              likes: likes.length,
+              likes: likes,
               users: {
                 first_name: data[ind].first_name,
                 last_name: data[ind].last_name,
