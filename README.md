@@ -12,4 +12,6 @@ knex migrate:latest
 npm start
 Server location
 
+
+
 http://localhost:5050
