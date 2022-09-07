@@ -6,9 +6,8 @@ const jwt = require("jsonwebtoken");
 
 signup = (req, res) => {
   const bodydata = req.body;
-  const {name,email,password} = req.body
-  console.log(name,email,password);
-  if (Object.keys(bodydata).length == 0) {
+  const {email,password,first_name,last_name} = req.body
+  if (Object.keys(bodydata).length == 0 || first_name == ""||last_name == ""||email == ""|| password == "" ) {
     return res.send({ status: "error", message: "body data empty..." });
   }
   bodydata.password = bcrypt.hashSync(bodydata.password, 10);
