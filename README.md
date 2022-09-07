@@ -5,7 +5,7 @@ in this project i have written back-end of blog app. here we can post our blog a
 Installation
 Install the dependencies and devDependencies and start the server.
 
-git clone https://github.com/pratikdeshmukh2004/salaries_dashboard.git
+git clone https://github.com/bhupend-deshmukh/Blog-App-BE
 cd Blog-App-BE
 npm i
 knex migrate:latest
