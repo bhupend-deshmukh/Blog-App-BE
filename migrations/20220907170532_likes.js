@@ -11,5 +11,6 @@ exports.up = function(knex) {
 
 
 exports.down = function(knex) {
-    return knex.schema.dropTable("likes")
+    return knex.schema.dropTable("posts")
+
 };
